@@ -23,6 +23,8 @@
   :ARTICLE:  flexbox vleft auto-fadein
   :END:
 
+** Recurso
+[[http://www.dsf.unica.it/~fiore/LearningPython.pdf][Learning Python]]
 **  
 Python es un lenguaje de programación multiparadigma - Soporta programación =orientada a objetos=, =programación imperativa= y en menor medida =programación funcional=.
 
@@ -39,13 +41,27 @@ Python3:
 Editor de texto:
 - [[https://atom.io/][Atom]]
 
+** Importante. Marcar Add Python to Path
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 650px
+[[file:images/path_python.png]]
+#+END_CENTER
+
 ** Ingresando y saliendo de la terminal
 #+BEGIN_SRC python
-$ python3
+$ python
 >>> quit()
 $
 #+END_SRC
 
+** Instalamos Jupyter
+[[http://jupyter.org/install.html]]
+
+#+BEGIN_SRC cmd
+$ python -m pip install --upgrade pip
+$ python -m pip install jupyter
+$ jupyter notebook   #Ingresamos a una interface web
+#+END_SRC
 ** Numeros
 #+BEGIN_SRC python
 >>> 123 + 222 #Adición de enteros
