@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!-- 2018-01-05 vie 04:35 -->
+<meta  charset="utf-8" />
+<meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
+<meta  name="generator" content="Org-mode with org-ioslide" />
+<meta  name="author" content="Albert Castellano Moreno" />
+
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--This one seems to work all the time, but really small on ipad-->
+<!--<meta name="viewport" content="initial-scale=0.4">-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" media="all" href="theme/css/default.css" />
+<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css" />
+<link rel="stylesheet" media="all" href="theme/css/small-icon.css" />
+<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+<script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+
+   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+<script src="js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local" type="text/javascript"></script>
+</head>
+<body style="opacity: 0">
+<slides class="layout-widescreen">
+<slide class="title-slide segue nobackground">
+       <aside class="gdbar"><img src="images/python-logo.png"></aside>
+       <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+       <hgroup class="auto-fadein">
+         <h1 data-config-title><!-- populated from slide_config.json --></h1>
+         <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+         <p data-config-presenter><!-- populated from slide_config.json --></p>
+       </hgroup>
+    </slide>
+  
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/python-logo.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-org9b20e9a" class="outline-2">
+<h2 id="org9b20e9a">Qué es Python?</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+
+
+</article>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org6ada538" class="outline-3">
+<h3 id="org6ada538"></h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Python es un lenguaje de programación multiparadigma - Soporta programación <code>orientada a objetos</code>, <code>programación imperativa</code> y en menor medida <code>programación funcional</code>.
+</p>
+
+<p>
+Es un lenguaje:
+</p>
+<ul>
+<li><code>interpretado</code>: La computadora va traduciendo el codigo a binario a medida que se ejecuta; esta traducción no se guarda.</li>
+<li>de <code>tipado dinamico</code>: Una variable puede tomar valores de distintos tipos (numeros, textos, listas &#x2026;)</li>
+<li><code>multiplataforma</code>: Puede ser ejecutado en muchos sistemas informaticos distintos mientras exista un interprete de el sistema.</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org4ead85a" class="outline-3">
+<h3 id="org4ead85a">Instalación</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Python3:
+</p>
+<ul>
+<li>32 bits: <a href="https://www.python.org/ftp/python/3.6.4/python-3.6.4.exe">Instalador Python3.6.4x86</a></li>
+<li>64 bits: <a href="https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd64.exe">Instalador Python3.6.4x64</a></li>
+</ul>
+
+<p>
+Editor de texto:
+</p>
+<ul>
+<li><a href="https://atom.io/">Atom</a></li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org7e9d9ad" class="outline-3">
+<h3 id="org7e9d9ad">Ingresando y saliendo de la terminal</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+$ python3
+&gt;&gt;&gt; quit()
+$</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgbd29108" class="outline-3">
+<h3 id="orgbd29108">Numeros</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; 123 + 222 #Adición de enteros
+345
+&gt;&gt;&gt; 1.5 * 4 # Multiplicación de punto flotante
+6.0
+&gt;&gt;&gt; 2 ** 100 # 2 elevado al exponente 100
+1267650600228229401496703205376
+&gt;&gt;&gt; import math
+&gt;&gt;&gt; math.pi
+3.141592653589793
+&gt;&gt;&gt; math.sqrt(85)
+9.219544457292887</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org85321b5" class="outline-3">
+<h3 id="org85321b5">Strings</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Strings son usados para guardar información textual y como colección de <code>bytes</code> (Como el contenido de una imagen).
+Es el primer ejemplo de lo que llamamos en python, <code>secuencia</code>, una colección de elementos ordenados posicionados con respectos de otros.
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; C = 'Control'
+&gt;&gt;&gt; len(C)
+7
+&gt;&gt;&gt; C[0]
+'C'
+&gt;&gt;&gt; C[1]
+'o'</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgd5de925" class="outline-3">
+<h3 id="orgd5de925">Tomando elementos a un String</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; C[len(C)-1]
+'l'
+&gt;&gt;&gt; C[-1]
+'l'
+&gt;&gt;&gt; C[-2]
+'o'
+&gt;&gt;&gt; C
+'Control'
+&gt;&gt;&gt; C[1:3]
+'on'
+&gt;&gt;&gt; C[1:]
+'ontrol'
+&gt;&gt;&gt; C[:6]
+'Contro'</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orga7ad68b" class="outline-3">
+<h3 id="orga7ad68b">Agregando elementos a un string</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; C
+'Control'
+&gt;&gt;&gt; C + ' System'
+'Control System'
+&gt;&gt;&gt; C
+'Control'
+&gt;&gt;&gt; C * 8
+'ControlControlControlControlControlControlControlControl'</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org58597e1" class="outline-3">
+<h3 id="org58597e1">Inmutabilidad en Strings</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; C
+'Control'
+&gt;&gt;&gt; C[0]='Z'
+TypeError: 'str' object does not support item assignment
+&gt;&gt;&gt; C = 'Z' + C[1:]
+&gt;&gt;&gt; C
+'Zontrol'</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orge9dbb71" class="outline-3">
+<h3 id="orge9dbb71">Metodos del Tipo String</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; C = 'Control'
+&gt;&gt;&gt; C.find('tr')
+3
+&gt;&gt;&gt; C.replace('tr', 'XYZ')
+'ConXYZol'
+&gt;&gt;&gt; C
+'Control'</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org772a252" class="outline-3">
+<h3 id="org772a252">Listas</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Las listas son colecciones ordenadas de objectos de tipo arbritrario. A diferencia de los strings, estos si son mutables.
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; L = [1, 'Control', 10.5]
+&gt;&gt;&gt; len(L)
+3
+&gt;&gt;&gt; L[0]
+1
+&gt;&gt;&gt; L[:-1]
+[1, 'Control']
+&gt;&gt;&gt; L + [4,5,6]
+[1, 'Control', 10.5, 4, 5, 6]
+&gt;&gt;&gt; L
+[1, 'Control', 10.5]</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org58c490c" class="outline-3">
+<h3 id="org58c490c">Metodos del tipo Lista</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; L.append('SI')
+&gt;&gt;&gt; L
+[1, 'Control', 10.5, 'SI']
+&gt;&gt;&gt; L.pop(2)
+10.5
+&gt;&gt;&gt; L
+[1, 'Control', 'SI']
+&gt;&gt;&gt; M.reverse()
+['SI', 'Control', 1]
+&gt;&gt;&gt; M = ['bb', 'aa', 'cc']
+&gt;&gt;&gt; M.sort()
+&gt;&gt;&gt; M
+['aa', 'bb', 'cc']</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgce38dca" class="outline-3">
+<h3 id="orgce38dca">Anidamiento de listas</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; M = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+&gt;&gt;&gt; M[1]
+[4, 5, 6]
+&gt;&gt;&gt; M[1][2]
+6</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org0b3dee5" class="outline-3">
+<h3 id="org0b3dee5"><code>Comprehensions</code></h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; col2 = [fila[1] for fila in M]
+&gt;&gt;&gt; col2
+[2,5,8]
+&gt;&gt;&gt; [fila[1] + 1 for fila in M]
+[3,6,9]
+&gt;&gt;&gt; [fila[1] for fila in M if fila[1] % 2 == 0]
+[2, 8]
+-----
+&gt;&gt;&gt; diagonal = [M[i][i] for i in [0, 1, 2]]
+&gt;&gt;&gt; diagonal
+[1, 5, 9] </pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgcca4109" class="outline-3">
+<h3 id="orgcca4109"><code>Comprenhensions</code></h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; list(range(4))
+[0,1,2,3]
+&gt;&gt;&gt; list(range(-6,7,2)
+[-6, -4, -2, 0, 2, 4, 6]
+&gt;&gt;&gt; [[x ** 2, x ** 3] for rang(4)]
+[[0, 0], [1, 1], [4, 8], [9, 27]]
+&gt;&gt;&gt; [[x, x / 2, x * 2] for x in range(-6,7,2) if x&gt;0]</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org41289fe" class="outline-3">
+<h3 id="org41289fe">Diccionarios</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Los diccionarios son una coleccion de otros objetos pero guardados en relacion a ciertas <code>llaves</code>
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; D = {'nombre': 'Albert', 'edad': 26, 'apellidos': "Castellano Moreno"}
+&gt;&gt;&gt; D['nombre']
+'Albert'
+&gt;&gt;&gt; D['edad'] += 1
+&gt;&gt;&gt; D
+{'nombre': 'Albert', 'edad': 27, 'apellidos': 'Castellano Moreno'}
+-----
+&gt;&gt;&gt; D = {}
+&gt;&gt;&gt; D['calle'] = 'Las Oropendolas'
+&gt;&gt;&gt; D['numero'] = 149
+&gt;&gt;&gt; D
+{'calle': 'Las Oropendolas', 'numero': 149}</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
+<aside class="gdbar right"><img src="images/python-logo.png"></aside><article class="flexbox vleft auto-fadein" id="text-">
+<h2>
+  <p>Gracias ˊ・ω・ˋ</p>
+</h2>
+<br>
+<p class="auto-fadein" data-config-contact>
+</p>
+</article>
+
+</slide>
+<slide class="backdrop"></slide>
+</slides> 
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body> 
+
+</html>

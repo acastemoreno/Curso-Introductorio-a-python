@@ -1,0 +1,172 @@
+#+TITLE: Curso Introductorio a Python
+#+SUBTITLE: Para: Control System Integration 
+#+DATE: 2018/01/05（Viernes）2:00pm
+#+AUTHOR: Albert Castellano Moreno
+#+EMAIL: acastemoreno@gmail.com
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+CREATOR: Emacs 25.2.1
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: es
+#+SELECT_TAGS: export
+
+#+FAVICON: images/python-logo.png
+#+ICON: images/python-logo.png
+
+* Modulos
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+** Modulos
+Un módulo es una archivo conteniendo definiciones y declaraciones de Python. El nombre del archivo es el nombre del módulo con el sufijo .py agregado. Dentro de un módulo, el nombre del mismo (como una cadena) está disponible en el valor de la variable global =__name__=.
+** Ejemplo
+Usá atom para crear un archivo llamado =fibo.py=, con el siguiente contenido:
+#+BEGIN_SRC python
+def fib(n): # escribe la serie Fibonacci hasta n
+    a, b = 0, 1
+    while b < n:
+        print(b)
+        a, b = b, a+b
+
+def fib2(n): # devuelve la serie Fibonacci hasta n
+    resultado = []
+    a, b = 0, 1
+    while b < n:
+        resultado.append(b)
+        a, b = b, a+b
+    return resultado
+#+END_SRC
+** Ejemplo
+
+#+BEGIN_SRC python
+>>> import fibo
+>>> fibo.fib(4)
+1 1 2 3
+>>> fibo.fib2(4)
+[1, 1, 2, 3]
+>>> fibo.__name__
+'fibo'
+
+# Cerramos interprete
+>>> from fibo import fib, fib2
+>>> fib2(4)
+[1, 1, 2, 3]
+>>> from fibo import * #Esto para importar todas las funciones
+#+END_SRC
+** Haciendo el programa ejecutable
+#+BEGIN_SRC python
+#fibo.py
+if __name__ == "__main__":
+    print(fib2(4)) #Ejecuta funcion principal
+#+END_SRC
+#+BEGIN_SRC cmd
+$ python fibo.py
+[1, 1, 2, 3]
+#+END_SRC
+** Si queremos que se reciban parametros
+#+BEGIN_SRC python
+#fibo.py
+if __name__ == "__main__":
+    import sys
+    print(fib2(int(sys.argv[1])))
+#+END_SRC
+#+BEGIN_SRC cmd 
+$ python fibo.py 4
+#+END_SRC
+** Ejercicio
+Si el programa hasta el momento funciona de la siguiente manera:
+#+BEGIN_SRC cmd
+$ python fibo.py 3
+[1, 1, 2]
+$ python fibo.py 2
+[1, 1]
+$ python fibo.py 1
+[] #Wdf
+#+END_SRC
+Corregir el programa para que =python fibo.py 1= de como resultado =[1]=
+
+* POO
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+Programación Orientada a Objetos
+** Clases
+#+BEGIN_SRC python
+#persona.py
+class Persona:
+    i=12345
+    def f(self):
+        return 'hola mundo'
+#+END_SRC
+
+#+BEGIN_SRC cmd
+$ python
+>>> from persona import Persona
+>>> x = Persona() #Creamos una instancia de Persona
+>>> x.i
+12345
+>>> x.f()
+'hola mundo'
+#+END_SRC
+** Otra manera de declarar su estado inicial
+#+BEGIN_SRC python
+#persona.py
+def __init__(self):
+    self.datos = []
+#+END_SRC
+#+BEGIN_SRC cmd
+$ python
+>>> from persona import Persona
+>>> x = Persona()
+>>> x.datos
+[]
+#+END_SRC
+** Al crear una instancia se pueden pasar parametros de creación
+#+BEGIN_SRC python
+#complejo.py
+class Complejo:
+    def __init__(self, parte_real, parte_imaginaria):
+        self.r = parte_real
+        self.i = parte_imaginaria
+#+END_SRC
+#+BEGIN_SRC cmd
+$ python
+>>> from complejo import Complejo
+>>> x = Complejo(3.0, -4.5)
+>>> x.r, x.i
+(3.0, -4.5)
+#+END_SRC
+** Los atributos de una instancia no necesitan ser declarados
+#+BEGIN_SRC cmd
+$ python
+>>> from persona import Persona
+>>> x = Persona()
+>>> x.contador = 1
+>>> while x.contador < 10:
+>>>     x.contador = x.contador * 2
+>>> print x.contador
+>>> del x.contador
+#+END_SRC
+* Excel
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+** Librerias recomendadas:
+- [[https://openpyxl.readthedocs.io/en/default/index.html][openyxl]]: Recomendado para lectura de archivos excel ([[http://openpyxl.readthedocs.io/en/default/usage.html?highlight=data_only#read-an-existing-workbook][Read existing workbook]], [[http://openpyxl.readthedocs.io/en/default/tutorial.html#accessing-many-cells][Accessing-many-cells]])
+- [[http://xlsxwriter.readthedocs.io/index.html][Xlsxwriter]]: Recomendado para creacion de archivos excel. Buena documentación. 
+* Gracias ˊ・ω・ˋ
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+

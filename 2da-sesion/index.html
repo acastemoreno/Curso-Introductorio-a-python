@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!-- 2018-01-12 vie 06:06 -->
+<meta  charset="utf-8" />
+<meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
+<meta  name="generator" content="Org-mode with org-ioslide" />
+<meta  name="author" content="Albert Castellano Moreno" />
+
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--This one seems to work all the time, but really small on ipad-->
+<!--<meta name="viewport" content="initial-scale=0.4">-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" media="all" href="theme/css/default.css" />
+<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css" />
+<link rel="stylesheet" media="all" href="theme/css/small-icon.css" />
+<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+<script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+
+   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+<script src="js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local" type="text/javascript"></script>
+</head>
+<body style="opacity: 0">
+<slides class="layout-widescreen">
+<slide class="title-slide segue nobackground">
+       <aside class="gdbar"><img src="images/python-logo.png"></aside>
+       <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+       <hgroup class="auto-fadein">
+         <h1 data-config-title><!-- populated from slide_config.json --></h1>
+         <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+         <p data-config-presenter><!-- populated from slide_config.json --></p>
+       </hgroup>
+    </slide>
+  
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/python-logo.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-org4963d4e" class="outline-2">
+<h2 id="org4963d4e">Modulos</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org010d01d" class="outline-3">
+<h3 id="org010d01d">Modulos</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Un módulo es una archivo conteniendo definiciones y declaraciones de Python. El nombre del archivo es el nombre del módulo con el sufijo .py agregado. Dentro de un módulo, el nombre del mismo (como una cadena) está disponible en el valor de la variable global <code>__name__</code>.
+</p>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgc371801" class="outline-3">
+<h3 id="orgc371801">Ejemplo</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Usá atom para crear un archivo llamado <code>fibo.py</code>, con el siguiente contenido:
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+def fib(n): # escribe la serie Fibonacci hasta n
+    a, b = 0, 1
+    while b &lt; n:
+        print(b)
+        a, b = b, a+b
+
+def fib2(n): # devuelve la serie Fibonacci hasta n
+    resultado = []
+    a, b = 0, 1
+    while b &lt; n:
+        resultado.append(b)
+        a, b = b, a+b
+    return resultado</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgc94243f" class="outline-3">
+<h3 id="orgc94243f">Ejemplo</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+&gt;&gt;&gt; import fibo
+&gt;&gt;&gt; fibo.fib(4)
+1 1 2 3
+&gt;&gt;&gt; fibo.fib2(4)
+[1, 1, 2, 3]
+&gt;&gt;&gt; fibo.__name__
+'fibo'
+
+# Cerramos interprete
+&gt;&gt;&gt; from fibo import fib, fib2
+&gt;&gt;&gt; fib2(4)
+[1, 1, 2, 3]
+&gt;&gt;&gt; from fibo import * #Esto para importar todas las funciones</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgea91778" class="outline-3">
+<h3 id="orgea91778">Haciendo el programa ejecutable</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+#fibo.py
+if __name__ == "__main__":
+    print(fib2(4)) #Ejecuta funcion principal</pre>
+
+</div>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="cmd">
+$ python fibo.py
+[1, 1, 2, 3]</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org634842a" class="outline-3">
+<h3 id="org634842a">Si queremos que se reciban parametros</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+#fibo.py
+if __name__ == "__main__":
+    import sys
+    print(fib2(int(sys.argv[1])))</pre>
+
+</div>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="cmd">
+$ python fibo.py 4</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org705f302" class="outline-3">
+<h3 id="org705f302">Ejercicio</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Si el programa hasta el momento funciona de la siguiente manera:
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="cmd">
+$ python fibo.py 3
+[1, 1, 2]
+$ python fibo.py 2
+[1, 1]
+$ python fibo.py 1
+[] #Wdf</pre>
+
+</div>
+<p>
+Corregir el programa para que <code>python fibo.py 1</code> de como resultado <code>[1]</code>
+</p>
+
+
+</article>
+
+</slide>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/python-logo.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-org2189649" class="outline-2">
+<h2 id="org2189649">POO</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+<p>
+Programación Orientada a Objetos
+</p>
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org294053e" class="outline-3">
+<h3 id="org294053e">Clases</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+#persona.py
+class Persona:
+    i=12345
+    def f(self):
+        return 'hola mundo'</pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="cmd">
+$ python
+&gt;&gt;&gt; from persona import Persona
+&gt;&gt;&gt; x = Persona() #Creamos una instancia de Persona
+&gt;&gt;&gt; x.i
+12345
+&gt;&gt;&gt; x.f()
+'hola mundo'</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org05eea3b" class="outline-3">
+<h3 id="org05eea3b">Otra manera de declarar su estado inicial</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+#persona.py
+def __init__(self):
+    self.datos = []</pre>
+
+</div>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="cmd">
+$ python
+&gt;&gt;&gt; from persona import Persona
+&gt;&gt;&gt; x = Persona()
+&gt;&gt;&gt; x.datos
+[]</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org3391be4" class="outline-3">
+<h3 id="org3391be4">Al crear una instancia se pueden pasar parametros de creación</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="python">
+#complejo.py
+class Complejo:
+    def __init__(self, parte_real, parte_imaginaria):
+        self.r = parte_real
+        self.i = parte_imaginaria</pre>
+
+</div>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="cmd">
+$ python
+&gt;&gt;&gt; from complejo import Complejo
+&gt;&gt;&gt; x = Complejo(3.0, -4.5)
+&gt;&gt;&gt; x.r, x.i
+(3.0, -4.5)</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgf0cf005" class="outline-3">
+<h3 id="orgf0cf005">Los atributos de una instancia no necesitan ser declarados</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="cmd">
+$ python
+&gt;&gt;&gt; from persona import Persona
+&gt;&gt;&gt; x = Persona()
+&gt;&gt;&gt; x.contador = 1
+&gt;&gt;&gt; while x.contador &lt; 10:
+&gt;&gt;&gt;     x.contador = x.contador * 2
+&gt;&gt;&gt; print x.contador
+&gt;&gt;&gt; del x.contador</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/python-logo.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-org9848553" class="outline-2">
+<h2 id="org9848553">Excel</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orga2feac8" class="outline-3">
+<h3 id="orga2feac8">Librerias recomendadas:</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<ul>
+<li><a href="https://openpyxl.readthedocs.io/en/default/index.html">openyxl</a>: Recomendado para lectura de archivos excel (<a href="http://openpyxl.readthedocs.io/en/default/usage.html?highlight=data_only#read-an-existing-workbook">Read existing workbook</a>, <a href="http://openpyxl.readthedocs.io/en/default/tutorial.html#accessing-many-cells">Accessing-many-cells</a>)</li>
+<li><a href="http://xlsxwriter.readthedocs.io/index.html">Xlsxwriter</a>: Recomendado para creacion de archivos excel. Buena documentación.</li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
+<aside class="gdbar right"><img src="images/python-logo.png"></aside><article class="flexbox vleft auto-fadein" id="text-">
+<h2>
+  <p>Gracias ˊ・ω・ˋ</p>
+</h2>
+<br>
+<p class="auto-fadein" data-config-contact>
+</p>
+</article>
+
+</slide>
+<slide class="backdrop"></slide>
+</slides> 
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body> 
+
+</html>
